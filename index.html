@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square Park: The Heart of Cabagan, Isabela</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom font import for a cleaner look */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -21,20 +20,38 @@
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
+
+        /* Custom style for the header background image with overlay */
+        .hero-header {
+            background-image: url('cabagan_park_header_bg.jpg'); /* Plain filename for GitHub */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 0;
+            color: white; /* Ensure text remains white */
+        }
+        .hero-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="antialiased bg-neutral-50">
 
-    <!-- Header / Hero Section (Deep Forest Green) -->
-    <header class="bg-green-800 text-white shadow-xl py-12 md:py-20">
-        <div class="container mx-auto px-4 text-center">
+    <!-- Header / Hero Section (Deep Forest Green) --><header class="hero-header shadow-xl py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center relative z-10">
             <h1 class="text-4xl md:text-6xl font-extrabold mb-2">Square Park: The Heart of Cabagan</h1>
             <p class="text-xl md:text-2xl font-light italic">Cabagan, Isabela</p>
         </div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="container mx-auto px-4 py-12 md:py-16">
+    <!-- Main Content Container --><main class="container mx-auto px-4 py-12 md:py-16">
 
         <!-- Introduction Section -->
         <section class="mb-16 bg-white p-6 md:p-10 rounded-xl shadow-lg">
